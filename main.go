@@ -45,7 +45,7 @@ func main() {
 		if len(curCode) != 3 {
 			log.Fatalf("Currency code at %d should be 3 characters in length: '%s'\n", i+1, curCode)
 		}
-		savings[curCode] += amt
+		savings[strings.ToUpper(curCode)] += amt
 	}
 
 	// Send an HTTP GET request
